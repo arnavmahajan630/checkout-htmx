@@ -1,0 +1,24 @@
+# Root folder
+root = "."
+
+# Temporary folder for build
+tmp_dir = "tmp"
+
+[build]
+# Windows requires .exe for the binary
+cmd = "go build -o ./tmp/main.exe ./cmd/app"
+bin = "./tmp/main.exe"
+
+# Output colors
+colors = true
+delay = 150
+
+# Watch extensions
+include_ext = ["go", "templ", "html", "css", "js"]
+
+# Exclude folders
+exclude_dir = ["bin", "tmp", "node_modules", ".git"]
+
+# Logging
+log = "time"
+tail = true
