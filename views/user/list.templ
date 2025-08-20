@@ -1,0 +1,17 @@
+package user
+
+import "github.com/arnavmahajan630/checkout-htmx/models"
+
+templ List(users []models.User) {
+	<div class="p-4 bg-gray-100 rounded-lg shadow-md">
+		<h2 class="text-xl font-bold mb-4">User List</h2>
+		<ul class="space-y-2">
+			for _, user := range users {
+				<li class="p-3 bg-white rounded-md flex justify-between items-center">
+					<span>{ user.Name }</span>
+					<span class="text-sm text-gray-500">{ user.Email }</span>
+				</li>
+			}
+		</ul>
+	</div>
+}
