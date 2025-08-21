@@ -29,7 +29,7 @@ func Navigation() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"text-center\"><h1 class=\"text-2xl font-bold my-5\">Simple Request Example</h1><button hx-get=\"/get-users\" hx-trigger=\"click\" hx-swap=\"outerHTML\" class=\"bg-blue-500 text-white py-2 px-3 my-5 rounded-lg\">Fetch Users</button></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"text-center\"><h1 class=\"text-2xl font-bold my-5\">Simple Request Example</h1><button hx-get=\"/get-users\" hx-trigger=\"click\" hx-target=\"#users\" hx-indicator=\"#loading\" class=\"bg-blue-500 text-white py-2 px-3 my-5 rounded-lg\">Fetch Users</button> <span class=\"htmx-indicator\" id=\"loading\">Loading...</span><div id=\"users\"></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

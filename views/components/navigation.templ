@@ -6,9 +6,14 @@ templ Navigation() {
         <button
             hx-get="/get-users"
             hx-trigger="click"
-            hx-swap="outerHTML"
+            hx-target="#users"
+            hx-indicator="#loading"
             class="bg-blue-500 text-white py-2 px-3 my-5 rounded-lg">
             Fetch Users
         </button>
+        <span class="htmx-indicator" id="loading">
+        Loading...
+        </span>
+        <div id="users"></div>
     </div>
 }
